@@ -1,0 +1,8 @@
+@import "../../../../styles/components/todoList/mixins.scss";
+
+.list-item {
+    padding: 10px;
+    transition: all 0.3s linear;
+
+    @include df_aic;
+}

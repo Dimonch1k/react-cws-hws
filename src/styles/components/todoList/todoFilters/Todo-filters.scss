@@ -1,0 +1,26 @@
+@import "../mixins.scss";
+
+.filter {
+  @include df_aic;
+  justify-content: space-between;
+  background-color: $white;
+  padding: 0.4rem 0;
+
+  .filter-buttons {
+    @include df_jcc_aic;
+
+    button {
+      @include fs_fw(0.75, 600);
+      color: rgb(68, 140, 207);
+      margin: 0 5px;
+      padding: 0 5px;
+      transition: background-color 0.3s linear;
+      border-radius: 3px;
+
+      &:hover {
+        background-color: rgb(184, 184, 184);
+        transition: background-color 0.5s linear;
+      }
+    }
+  }
+}

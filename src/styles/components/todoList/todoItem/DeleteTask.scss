@@ -1,0 +1,11 @@
+@import "../mixins.scss";
+
+.delete-btn {
+    margin-left: auto;
+    @include df_aic;
+
+    .delete-img {
+        @include w_h(15px, 15px);
+        border-radius: 50%;
+    }
+}

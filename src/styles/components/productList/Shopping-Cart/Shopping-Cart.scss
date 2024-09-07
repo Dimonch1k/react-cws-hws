@@ -1,0 +1,28 @@
+.shopping-cart {
+  margin-left: 5px;
+  height: 100%;
+
+  &__basket {
+    position: relative;
+    cursor: pointer;
+    border-radius: 50%;
+  }
+
+  &__counter {
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    font-size: 16px;
+    font-weight: 500;
+    background-color: white;
+    border-radius: 50%;
+    border: 1px solid red;
+    color: red;
+    z-index: 10;
+    width: 16px;
+    height: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}

@@ -1,0 +1,15 @@
+@import "../../../../styles/components/todoList/mixins.scss";
+
+.complete-btn {
+    @include w_h(14px, 14px);
+    @include df_aic;
+
+    position: relative;
+    margin-left: 5px;
+
+    img {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+    }
+}

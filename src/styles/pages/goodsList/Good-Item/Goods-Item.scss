@@ -1,0 +1,95 @@
+@import "../../../../styles/mixins.scss";
+
+.good {
+  border: 1px solid #e9e9e9;
+  overflow: visible;
+  height: auto;
+  width: 100%;
+  box-shadow: 0px 2px 5px 0 rgba(0, 0, 0, 0.75);
+
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+
+    padding: 5px 0;
+    height: max-content;
+  }
+
+  &__item {
+    margin-bottom: 5px;
+  }
+
+  &__image {
+    position: relative;
+    min-height: 140px;
+    width: 180px;
+
+    img {
+      position: absolute;
+      // top: 50%;
+      // left: 50%;
+      // transform: translate(-50%, -50%);
+      width: 100%;
+      height: 100% !important;
+    }
+  }
+
+  &__title {
+    @include col_fs(#221f1f, 14px);
+
+    text-align: center;
+    line-height: 18px;
+    height: 36px;
+    max-width: 180px;
+  }
+
+  &__count {
+    @include col_fs(rgb(5, 99, 5), 12px);
+  }
+
+  &__price {
+    @include col_fs(#f84147, 18px);
+    font-weight: 600;
+    margin: 0;
+  }
+
+  &__count,
+  &__price {
+    padding-left: 3px;
+    @include df_jc_ai(flex, start, end !important);
+  }
+
+  .description {
+    position: relative;
+    width: 100%;
+    margin-bottom: 5px;
+
+    &__hidden {
+      width: 100%;
+      box-shadow: -1px 0 0 0 rgba(255, 255, 255), 1px 0 0 0 rgba(255, 255, 255),
+        0px 10px 10px 0px rgb(222, 222, 222);
+
+      position: absolute;
+      z-index: 5;
+
+      &.hidden {
+        display: none;
+      }
+    }
+
+    &__hidden-inner {
+      @include col_fs(#797878, 12px);
+
+      padding: 5px 10px;
+      text-align: center;
+      background-color: #fff;
+    }
+  }
+}

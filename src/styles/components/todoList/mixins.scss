@@ -1,0 +1,42 @@
+$flex: flex;
+$center: center;
+$white: white;
+
+@mixin df_jcc_aic {
+  display: $flex;
+  justify-content: $center;
+  align-items: $center;
+}
+
+@mixin df_aic {
+  display: $flex;
+  align-items: $center;
+}
+
+@mixin fs_fw($fs: 1rem, $fw: normal) {
+  font-size: calc(1rem * $fs);
+  font-weight: $fw;
+}
+
+@mixin w_h($w: auto, $h: auto) {
+  width: $w;
+  height: $h;
+}
+
+@mixin todo_styles {
+  height: 100vh;
+  background: linear-gradient(to top, #00c6fb 0%, #005bea 100%);
+
+  @include df_aic;
+  flex-direction: column;
+}
+
+@mixin header_styles {
+  @include fs_fw(3, 300);
+
+  letter-spacing: 10px;
+  padding: 2rem 0 2rem 0;
+
+  text-align: $center;
+  color: $white;
+}

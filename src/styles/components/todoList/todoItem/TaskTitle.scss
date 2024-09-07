@@ -1,0 +1,9 @@
+.task-title {
+    margin-left: 10px;
+    overflow-y: scroll;
+    scrollbar-width: none; /* Firefox */
+
+    &::-webkit-scrollbar {
+        display: none;
+    }
+}

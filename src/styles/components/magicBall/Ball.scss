@@ -1,0 +1,116 @@
+.ball {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 500px;
+  height: 500px;
+
+  box-shadow: 0px 0px 200px 0px rgba(19, 63, 63, 0.7);
+  border-radius: 50%;
+
+  .answer-btn {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    cursor: pointer;
+
+    background: url("../../../images/magicBall/magic-ball.png") no-repeat;
+    background-size: cover;
+
+    .answer-text {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: white;
+      width: 100px;
+    }
+  }
+
+  &.shake-ball {
+    animation: shakeBall 1s ease-in-out forwards;
+  }
+}
+
+@keyframes shakeBall {
+  0% {
+    transform: translate(-50%, -50%);
+  }
+  4% {
+    transform: translate(-52%, -51%);
+  }
+  8% {
+    transform: translate(-51%, -52%);
+  }
+  12% {
+    transform: translate(-49%, -52%);
+  }
+  16% {
+    transform: translate(-48%, -51%);
+  }
+  20% {
+    transform: translate(-48%, -49%);
+  }
+  24% {
+    transform: translate(-49%, -48%);
+  }
+  28% {
+    transform: translate(-51%, -48%);
+  }
+  32% {
+    transform: translate(-52%, -49%);
+  }
+  36% {
+    transform: translate(-48%, -48%);
+  }
+  40% {
+    transform: translate(-51%, -51%);
+  }
+  44% {
+    transform: translate(-49%, -51%);
+  }
+  48% {
+    transform: translate(-53%, -52%);
+  }
+  52% {
+    transform: translate(-53%, -53%);
+  }
+  56% {
+    transform: translate(-50%, -54%);
+  }
+  60% {
+    transform: translate(-47%, -53%);
+  }
+  64% {
+    transform: translate(-46%, -50%);
+  }
+  68% {
+    transform: translate(-47%, -47%);
+  }
+  72% {
+    transform: translate(-50%, -46%);
+  }
+  76% {
+    transform: translate(-53%, -47%);
+  }
+  80% {
+    transform: translate(-54%, -50%);
+  }
+  84% {
+    transform: translate(-53%, -53%);
+  }
+  88% {
+    transform: translate(-50%, -53%);
+  }
+  92% {
+    transform: translate(-49%, -52%);
+  }
+  96% {
+    transform: translate(-49%, -51%);
+  }
+  100% {
+    transform: translate(-50%, -50%);
+  }
+}
