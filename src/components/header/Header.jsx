@@ -4,7 +4,7 @@ import "../../styles/components/header/Header.scss";
 import { useContext } from "react";
 
 const Header = () => {
-  const location = useLocation();
+  // const location = useLocation();
   // const {theme, toggleTheme} = useContext(ThemeContext);
 
   return (
@@ -18,7 +18,6 @@ const Header = () => {
         <NavLink to="magic-ball">Magic Ball</NavLink>
         <NavLink to="users">Users</NavLink>
         <NavLink to="goods">Goods</NavLink>
-        {/* <NavLink to="user/:id">User</NavLink> */}
       </nav>
 
       {/* <Space size={"middle"}></Space> */}

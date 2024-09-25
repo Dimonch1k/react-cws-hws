@@ -1,4 +1,6 @@
-import React, { useState, useEffect, useCallback } from "react";
+import React, { useState, useEffect, useCallback, useContext } from "react";
+import classNames from "classnames";
+
 import ProductItem from "./Product-Item/Product-Item";
 import AddProduct from "./Add-Product/Add-Product";
 import Filters from "./Filters/Filters";
@@ -6,7 +8,7 @@ import Sorting from "./Sorting/Sorting";
 import ListGrid from "./List-Grid/List-Grid";
 import ProductsCart from "./Products-Cart/Products-Cart";
 
-import classNames from "classnames";
+import { WishListContext } from "../../providers/wishListProvider";
 
 import { productList } from "./productList";
 
@@ -34,7 +36,8 @@ const ProductsList = () => {
   const [currentFilter, setCurrentFilter] = useState("All");
   const [currentSort, setCurrentSort] = useState("Initially cheap");
   const [gridRows, setGridRows] = useState(false);
-  const [counter, setCounter] = useState(0);
+  const { wishList, counter, addToWishList, removeFromWishList } =
+    useContext(WishListContext);
 
   const addNewProduct = useCallback(
     (product) => {
@@ -46,6 +49,38 @@ const ProductsList = () => {
   useEffect(() => {
     localStorage.setItem("products", JSON.stringify(products));
   }, [products]);
+
+  // Function to toggle the 'like' state and update the product list
+  const toggleFavorite = (product) => {
+    setProducts((prevProducts) =>
+      prevProducts.map((p) =>
+        p.id === product.id ? { ...p, like: !p.like } : p
+      )
+    );
+
+    if (product.like) removeFromWishList(product);
+    else addToWishList(product);
+  };
+
+  const filteredAndSortedProducts = () => {
+    return products
+      .filter(filterMap[currentFilter])
+      .sort(sortingMap[currentSort]);
+  };
+
+  const renderProductItem = (productInfo) => {
+    return (
+      <ProductItem
+        key={productInfo.id}
+        product={{
+          ...productInfo,
+          like: wishList.some((wish) => wish.id === productInfo.id),
+        }}
+        gridRows={gridRows}
+        toggleFavorite={() => toggleFavorite(productInfo)}
+      />
+    );
+  };
 
   return (
     <div>
@@ -76,20 +111,7 @@ const ProductsList = () => {
         </div>
 
         <div className={classNames("product-list", { rows: gridRows })}>
-          {products
-            .filter(filterMap[currentFilter])
-            .sort(sortingMap[currentSort])
-            .map((product) => (
-              <ProductItem
-                key={product.id}
-                image={product.image}
-                info={product.info}
-                price={product.price}
-                expire={product.expire}
-                more={product.more}
-                gridRows={gridRows}
-              />
-            ))}
+          {filteredAndSortedProducts().map(renderProductItem)}
         </div>
       </div>
     </div>

@@ -20,8 +20,9 @@ export const productList = [
       processor: "Intel Core i5-1135G7",
       ram: "16GB",
       storage: "512GB SSD",
-      display: "14.6\"",
-    }
+      display: '14.6"',
+    },
+    like: false,
   },
   {
     id: Math.random(),
@@ -34,8 +35,9 @@ export const productList = [
       processor: "Ryzen 5 7535HS",
       ram: "16GB",
       storage: "1024GB SSD",
-      display: "15.6\"",
-    }
+      display: '15.6"',
+    },
+    like: false,
   },
   {
     id: Math.random(),
@@ -48,8 +50,9 @@ export const productList = [
       processor: "Intel Core i5-12450H",
       ram: "16GB",
       storage: "1024GB SSD",
-      display: "15.6\"",
-    }
+      display: '15.6"',
+    },
+    like: false,
   },
   {
     id: Math.random(),
@@ -62,8 +65,9 @@ export const productList = [
       processor: "AMD Ryzen 5 5500H",
       ram: "16GB",
       storage: "512GB SSD",
-      display: "15.6\"",
-    }
+      display: '15.6"',
+    },
+    like: false,
   },
   {
     id: Math.random(),
@@ -76,8 +80,9 @@ export const productList = [
       processor: "AMD Ryzen 7 7730U",
       ram: "32GB",
       storage: "1024GB SSD",
-      display: "16\"",
-    }
+      display: '16"',
+    },
+    like: false,
   },
   {
     id: Math.random(),
@@ -89,8 +94,9 @@ export const productList = [
       processor: "Intel Core i5-13500H",
       ram: "32GB",
       storage: "512GB SSD",
-      display: "16.1\"",
-    }
+      display: '16.1"',
+    },
+    like: false,
   },
   {
     id: Math.random(),
@@ -102,8 +108,9 @@ export const productList = [
       processor: "M2",
       ram: "8GB",
       storage: "256GB SSD",
-      display: "13.6\"",
-    }
+      display: '13.6"',
+    },
+    like: false,
   },
   {
     id: Math.random(),
@@ -116,13 +123,14 @@ export const productList = [
       processor: "Intel Ultra 5",
       ram: "16GB",
       storage: "512GB SSD",
-      display: "14.6\"",
-    }
+      display: '14.6"',
+    },
+    like: false,
   },
   {
     id: Math.random(),
     image: macbookPro14M2Pro,
-    info: "Laptop Apple MacBook Pro 14\" M2 Pro",
+    info: 'Laptop Apple MacBook Pro 14" M2 Pro',
     price: "75999",
     expire: false,
 
@@ -130,7 +138,8 @@ export const productList = [
       processor: "M2 Pro",
       ram: "16GB",
       storage: "512GB SSD",
-      display: "14.2\"",
-    }
+      display: '14.2"',
+    },
+    like: false,
   },
 ];

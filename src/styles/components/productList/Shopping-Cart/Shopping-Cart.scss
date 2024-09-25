@@ -1,3 +1,5 @@
+@import "../../../../styles/mixins.scss";
+
 .shopping-cart {
   margin-left: 5px;
   height: 100%;
@@ -10,19 +12,15 @@
 
   &__counter {
     position: absolute;
-    top: -5px;
-    right: -5px;
-    font-size: 16px;
-    font-weight: 500;
-    background-color: white;
-    border-radius: 50%;
-    border: 1px solid red;
-    color: red;
     z-index: 10;
-    width: 16px;
-    height: 16px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    top: -6px;
+    right: -8px;
+    font-weight: 400;
+    border-radius: 50%;
+    background-color: #00a046;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    @include col_fs(white, 12px);
+    @include w_h(18px, 18px);
+    @include df_jc_ai(flex, center, center);
   }
 }

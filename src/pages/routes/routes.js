@@ -4,14 +4,14 @@ import App from "../../App";
 import Home from "../../pages/home/home";
 import TodoList from "../../components/todoList/Todo-List";
 import ProductList from "../../components/productsList/Products-List";
-import ProductsCart from "../../components/productsList/Products-Cart/Products-Cart";
+import WishList from "../../components/productsList/Wish-List/Wish-List";
 import MagicBall from "../../components/magicBall/Magic-Ball";
 
 import Users from "../users/Users";
 import User from "../users/User";
 import { getUsers, getUser } from "../../loaders/usersLoaders";
 import Goods from "../goods/Goods";
-import Good from "../goods/Good"; 
+import Good from "../goods/Good";
 import { getGoods, getGood } from "../../loaders/goodsLoaders";
 
 const router = createBrowserRouter([
@@ -31,12 +31,10 @@ const router = createBrowserRouter([
       {
         path: "/product-list",
         element: <ProductList />,
-        children: [
-          {
-            path: ":cart",
-            element: <ProductsCart />,
-          },
-        ],
+      },
+      {
+        path: "wish-list",
+        element: <WishList />,
       },
       {
         path: "/magic-ball",
@@ -65,7 +63,7 @@ const router = createBrowserRouter([
             loader: getGood,
           },
         ],
-      }
+      },
     ],
   },
 ]);
