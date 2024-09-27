@@ -83,7 +83,7 @@ const ProductsList = () => {
   };
 
   return (
-    <div>
+    <>
       <div className="container">
         <div className="catalog-settings">
           {/* Add Product */}
@@ -114,7 +114,7 @@ const ProductsList = () => {
           {filteredAndSortedProducts().map(renderProductItem)}
         </div>
       </div>
-    </div>
+    </>
   );
 };
 

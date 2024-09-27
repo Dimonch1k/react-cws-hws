@@ -41,6 +41,7 @@ button {
   @include todo_styles;
   margin: 0;
   padding: 0;
+  height: 100%;
 
   &__header {
     @include header_styles;

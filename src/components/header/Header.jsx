@@ -1,10 +1,10 @@
 import { NavLink } from "react-router-dom";
 import { House } from "lucide-react";
-import { useContext, useState } from "react";
+import { useContext, useEffect, useRef, useState } from "react";
 import { Button, Space } from "antd";
 import { MoonOutlined, SunOutlined } from "@ant-design/icons";
 
-// import { ThemeContext } from "../../providers/themeProvider";
+import ThemeContext from "../../providers/themeProvider";
 import Auth from "../auth/Auth";
 
 import "../../styles/components/header/Header.scss";
@@ -37,7 +37,7 @@ const Header = () => {
           type="primary"
           shape="circle"
           icon={theme === "dark" ? <SunOutlined /> : <MoonOutlined />}
-          onClick={toggleTheme}
+          onClick={() => toggleTheme()}
         />
 
         <Auth />
