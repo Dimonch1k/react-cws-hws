@@ -1,0 +1,14 @@
+.goods-list,
+.wish-list,
+.posts-list {
+  font-family: Arial, "Segoe UI", Roboto, Helvetica, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)) !important;
+  gap: 10px;
+
+  max-width: 1560px;
+  margin: 0 auto;
+}

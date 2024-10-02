@@ -1,0 +1,18 @@
+@import "../../../styles/mixins.scss";
+
+.post {
+  @include jcc_aic;
+  padding: 3px;
+
+  &__title {
+    text-align: center;
+    font-size: 15px;
+    font-weight: 600;
+  }
+
+  &__body {
+    text-align: justify;
+    font-size: 12px;
+    margin-bottom: 1rem;
+  }
+}
